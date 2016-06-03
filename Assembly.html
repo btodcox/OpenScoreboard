@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Assembly</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<p>last edited: Jun 3</p>
+<h1>Wireless 8-Lane Scoreboard</h1>
+<h2>Bill of Materials for 8 Lane Wireless Scoreboard</h2>
+<p>Custom PCA (a total of N+1 Custom PCAs are needed for an N-lane scoreboard)</p>
+<ul>
+<li>9x Custom Scoreboard PCB (Eagle CAD files available)</li>
+<li>18X 74AHCT245D Octal Transceiver SOIC-20 (<a href="http://www.mouser.com/Search/ProductDetail.aspx?R=74AHCT245D,118virtualkey66800000virtualkey771-AHCT245D118">Mouser 771-AHCT245D118</a>)</li>
+<li>2.1mm x 5.5mm DC barrel jack (<a href="http://www.mouser.com/Search/ProductDetail.aspx?R=163-7620E-Evirtualkey11180000virtualkey163-7620E-E">Mouser 163-7620E-E</a>)</li>
+<li>18X dual row 2x5 0.1&quot; female header (<a href="http://www.mouser.com/Search/ProductDetail.aspx?R=215309-5virtualkey57100000virtualkey571-215309-5">Mouser 571-215309-5</a>)</li>
+<li>~250X Breakaway 0.1&quot; Male Headers (<a href="http://www.mouser.com/Search/ProductDetail.aspx?R=54101-S08-00virtualkey64910000virtualkey649-54101-S08-00">Mouser 649-54101-S08-00</a>)</li>
+<li>18X 0.1uF 16V 10% X7R 0603 capacitor (<a href="http://www.mouser.com/Search/ProductDetail.aspx?R=C0603C104K4RAC7411virtualkey64600000virtualkey80-C0603C104K4R7411">Mouser 80-C0603C104K4R7411</a>)</li>
+</ul>
+<p>Electronic Parts</p>
+<ul>
+<li>9X <a href="http://lowpowerlab.com/moteino/#pinout">Moteino Arduino clone with tranceiver and flash</a> </li>
+<li>1X <a href="http://lowpowerlab.com/moteino/#pinout">USB Moteino with transciever and no flash</a></li>
+<li>68X 16x24 Red LED Matrix Panel Chainable HT1632C Driver (<a href="http://www.adafruit.com/products/555">Adafruit part #555</a>)</li>
+<li>408X 1206 4RNet 27 Ohm 5% (to increase brightness of LED panels) (<a href="http://www.mouser.com/Search/ProductDetail.aspx?R=EXB-38V270JVvirtualkey66720000virtualkey667-EXB-38V270JV">Mouser 667-EXB-38V270JV</a>)</li>
+<li>84X 2x5 IDC ribbon cable male connectors (need a different part number as I don't like the ones that I last ordered from Mouser)</li>
+<li>~50ft Flat Cables 28 AWG Ribbon .050 Zip 10 Cond (<a href="http://www.mouser.com/Search/ProductDetail.aspx?R=191-2801-110FTvirtualkey52320000virtualkey523-191-2801-110FT">Mouser 523-191-2801-110FT</a>)</li>
+<li>4X 5V 10A switching power supply (<a href="http://www.adafruit.com/product/658">Adafruit part #658</a>)</li>
+<li>3X 2-Way 2.1mm DC Barrel Jack Splitter Squid (<a href="http://www.adafruit.com/product/1351">Adafruit part #1351</a>)</li>
+<li>Heavy gauge wire for connecting three lanes together (could not find a squid splitter long enough for Event/Heat + 2 lanes)</li>
+<li>Surge protector</li>
+<li>Mini-USB to USB cable</li>
+<li>Small plastic box for USB Moteino</li>
+</ul>
+<p>Case/Mechanical Structure</p>
+<ul>
+<li>18X 3/4 in. x 1/2 in. x 36 in. Aluminum Flat Angle with 1/16 in. Thick (<a href="http://www.homedepot.com/p/Crown-Bolt-3-4-in-x-1-2-in-x-36-in-Aluminum-Flat-Angle-with-1-16-in-Thick-43650/202183475">Home Depot</a>/Lowes/etc)</li>
+<li>2X Steelworks 6-ft L x -3/4-in W x -3/4-in H Aluminum Plain Square Tube (<a href="http://www.lowes.com/pd_215691-37672-11388_0__">Lowes</a>/Home Depot/etc)</li>
+<li>Red Cast Acrylic (Aero-Shield Plastics in Houston)</li>
+<li>1x6 Poplar S4S boards for case (Home Depot/Lowes/etc)</li>
+<li>272X 4-40 x 1&quot; female/female hex binding post (<a href="http://www.mouser.com/Search/ProductDetail.aspx?R=2205virtualkey53400000virtualkey534-2205">Mouser 534-2205</a>)</li>
+<li>544x 4-40 3/8&quot; phillips head screws (<a href="http://www.mouser.com/Search/ProductDetail.aspx?R=9901virtualkey53400000virtualkey534-9901">Mouser 534-9901</a>)</li>
+<li>1-1/4 in. Coarse Zinc-Plated Steel Square-Head Pocket Screws (100-Pack) (<a href="http://www.homedepot.com/p/Kreg-1-1-4-in-Coarse-Zinc-Plated-Steel-Square-Head-Pocket-Screws-100-Pack-SML-C125-100/100572559">Home Depot</a>)</li>
+<li>1X 1/4 in. 5 ft. x 5ft Baltic Birch Plywood-Grade A (<a href="http://www.houstonhardwoods.net/">Houston Hardwoods</a>)</li>
+<li>Paint for wood (less than 1/2 pint is needed to cover wood)</li>
+<li>Exterior grade urethane for back of plywood</li>
+<li>Black matte spray paint for interior of plywood and aluminum</li>
+</ul>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
